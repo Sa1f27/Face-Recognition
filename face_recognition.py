@@ -53,7 +53,7 @@ def start_recognition():
                     label = best_match_name if best_match_name else "Unknown"
                 except Exception as e:
                     label = "Error"
-                    print(f"Error processing detected face: {e}")
+                    print(f"Error processing : {e}")
 
                 x, y, w, h = facial_area['x'], facial_area['y'], facial_area['w'], facial_area['h']
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
