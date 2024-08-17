@@ -44,7 +44,7 @@ def start_recognition():
                     best_match_name = None
                     smallest_distance = float("inf")
 
-                    for known_embedding, name in zip(known_face_embeddings, known_face_names):
+                    if known_embedding, name in zip(known_face_embeddings, known_face_names):
                         distance = np.linalg.norm(known_embedding - detected_embedding)
                         if distance < smallest_distance:
                             smallest_distance = distance
