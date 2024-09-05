@@ -8,7 +8,7 @@ def load_known_faces(known_faces_dir='known_faces'):
     known_face_names = []
 
     for file_name in os.listdir(known_faces_dir):
-        if file_name.endswith(('.jpg', '.jpeg', '.png')):
+        if file_name.endswith(('.jpg', '.png')):
             file_path = os.path.join(known_faces_dir, file_name)
             try:
                 embedding = DeepFace.represent(img_path=file_path, model_name='Facenet', enforce_detection=False)
